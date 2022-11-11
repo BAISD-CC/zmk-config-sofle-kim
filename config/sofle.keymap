@@ -35,17 +35,17 @@
 // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |   F5  |
 // |  TAB  |  Q  |  W  |  F   |  P   |  G   |                   |  J   |   L   |   U   |  Y   |   ;   |   \   |
 // | CAPS  |  A  |  R  |  S   |  T   |  D   |                   |  H   |   N   |   E   |  I   |   O   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  C_PP  |  |       |  K   |   M   |   ,   |  .   |   /   | SHIFT |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  C_PP  |  |  F5   |  K   |   M   |   ,   |  .   |   /   | SHIFT |
 //               |ALT | CTRL  | LGUI | LOWER|  SPACE |  | ENTER | RAISE|  BSPC |  CTRL | DEL  |
             bindings = <
 &kp ESC    &kp N1  &kp N2     &kp N3     &kp N4    &kp N5                          &kp N6  &kp N7     &kp N8     &kp N9   &kp N0    &kp F5
 &kp TAB    &kp Q   &kp W      &kp F      &kp P     &kp G                           &kp J   &kp L      &kp U      &kp Y    &kp SEMI  &kp BSLH
 &kp CAPS   &kp A   &kp R      &kp S      &kp T     &kp D                           &kp H   &kp N      &kp E      &kp I    &kp O     &kp SQT
-&kp LSHFT  &kp Z   &kp X      &kp C      &kp V     &kp B   &kp C_PP    &none       &kp K   &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&kp LSHFT  &kp Z   &kp X      &kp C      &kp V     &kp B   &kp C_PP    &kp F5      &kp K   &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                    &kp LALT   &kp LCTRL  &kp LGUI  &mo 1   &kp SPACE   &kp ENTER   &mo 2   &kp BSPC   &kp RCTRL  &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp UP DOWN>;
         };
 
         lower_layer {
@@ -64,7 +64,7 @@
                     &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans   &trans          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp UP DOWN>;
         };
 
         raise_layer {
@@ -82,7 +82,7 @@
                         &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp UP DOWN>;
         };
 
 // ------------------------------------------------------------------------------------------------------------
